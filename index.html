@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Start navbar -->
+    <section>
+      <div id="side-nav">
+        <div class="nav-logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="nav-toggle-menu" id="toggle-nav">
+          <i class="fa-solid fa-xmark tglIcons"></i>
+          <i class="fa-solid fa-align-justify tglIcons" id="open"></i>
+        </div>
+        <div class="nav-social">
+          <div class="nav-lang">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="nav-share">
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+      <div id="nav-menu">
+        <div class="nav-topics">
+          <ul>
+            <li>
+              <a href="#" class="nav-topic">Now Playing</a>
+            </li>
+            <li>
+              <a href="#" class="nav-topic">Popular</a>
+            </li>
+            <li>
+              <a href="#" class="nav-topic">Top Rated</a>
+            </li>
+            <li>
+              <a href="#" class="nav-topic">Trending</a>
+            </li>
+            <li>
+              <a href="#" class="nav-topic">Upcoming</a>
+            </li>
+            <li>
+              <a href="#" class="nav-topic">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-social-icons">
+          <div class="nav-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <div class="copyRight pt-3">
+            Copyright Â© 2019 All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End navbar -->
+    <!-- Start search -->
+    <section class="pt-5" id="search">
+      <div class="container w-75">
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              type="text"
+              id="allMovies"
+              placeholder="get movies by word..."
+              class="form-control mb-5"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              id="word"
+              placeholder="search..."
+              class="form-control mb-5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End search -->
+    <!-- Start movies -->
+    <section id="movies" class="container my-1 py-2 text-center">
+      <div class="row" id="data">
+        <div class="col-md-6 col-lg-4 my-3">
+          <div class="movie rounded position-relative">
+            <div class="poster">
+              <img
+                src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+              <div class="layer d-flex align-items-center px-2">
+                <div class="info">
+                  <h2>Doctor Strange in the Multiverse of Madness</h2>
+                  <p>
+                    Doctor Strange, with the help of mystical allies both old
+                    and new, traverses the mind-bending and dangerous alternate
+                    realities of the Multiverse to confront a mysterious new
+                    adversary.
+                  </p>
+                  <p class="rate">rate : 7.6</p>
+                  <p class="date">2022-05-04</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End movies -->
+    <!-- Start contact -->
+    <section id="contact" class="container w-75 mx-auto my-5">
+      <h2 class="text-light my-5">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            <div class="alert alert-danger" id="nameAlert">Your name is not valid</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+            <div class="alert alert-danger" id="emailAlert">Enter valid email</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="number" class="form-control" id="phone" placeholder="Enter Phone">
+            <div class="alert alert-danger" id="phoneAlert">Enter valid phone number</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="number" class="form-control" id="age" placeholder="Enter Age">
+            <div class="alert alert-danger" id="ageAlert">Enter valid age</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            <div class="alert alert-danger" id="passwordAlert">
+              entre valid password *Minimum eight characters, at least one letter and one number:*
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="password" class="form-control" id="repass" placeholder="Reenter Password">
+            <div class="alert alert-danger" id="rePassAlert">Reenter the password</div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" disabled id="submitBtn" class="btn btn-outline-danger">
+        Submit
+      </button>
+    </section>
+    <!-- End contact -->
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/mine.js"></script>
+  </body>
+</html>

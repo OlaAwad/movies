@@ -1,0 +1,147 @@
+body{
+    background-color: #000000f2;
+}
+/* Start navbar */
+#side-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    z-index: 99999999;
+    background-color: #f8f6f6;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.nav-logo{
+    padding: 25px 0;
+}
+.nav-logo img{
+    height: 48px;
+}
+.nav-toggle-menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.nav-toggle-menu i{
+    font-size: 25px;
+    font-weight: 900;
+}
+.nav-toggle-menu .fa-xmark{
+    display: none;
+}
+.nav-social{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nav-social div{
+    padding-top: 15px;
+}
+.nav-social i{
+    font-size: 1.2rem;
+}
+#nav-menu{
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 45645;
+    background-color: #000;
+    transition: all 0.5s ease;
+}
+.nav-topics ul{
+    padding-left: 30px;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.nav-topics li{
+    opacity: 0;
+    padding-top: 500px;
+    list-style: none;
+    transition: all 1.5s;
+}
+.nav-topics li a{
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.nav-topics li a:hover{
+    color: #EF675F;
+}
+.nav-social-icons{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.nav-social-icons a{
+    color: white;
+    padding-left: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.nav-social-icons a:hover{
+    color: #EF675F;
+}
+.nav-social-icons .copyRight{
+    color: #999999;
+    font-size: 15px;
+}
+/* End navbar */
+/* Start search */
+.form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    color: white;
+    padding: .375rem .75rem;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 1.1rem;
+} 
+input:focus {
+    background-color: transparent !important;
+    color: white !important;
+}
+/* End search */
+/* Start movies */
+#movies .movie{
+    overflow: hidden;
+}
+#movies .layer{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+    transition: all 0.7s;
+    color: black;
+}
+#movies .movie:hover .layer{
+    top: 0;
+}
+/* End movies */
+/* Start contact */
+#contact h2{
+    font-weight: 300;
+}
+#contact .alert{
+    display: none;
+}
+#contact .form-group{
+    margin-bottom: 1rem;
+}
+/* End contact */
