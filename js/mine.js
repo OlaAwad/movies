@@ -170,3 +170,83 @@ async function searchAPI(val) {
 
   displayMovies(result.results)
 }
+
+// Validation:
+let vName = $('#nameAlert')
+let vEmail = $('#emailAlert')
+let vPhone = $('#phoneAlert')
+let vAge = $('#ageAlert')
+let vPassword = $('#passwordAlert')
+let vRePassword = $('#rePassAlert')
+
+// Validate name:
+$('#name').keyup(function () {
+  if (/^[A-Za-z]/.test($('#name').val()) == false) {
+    vName.css('display', 'block')
+  } else {
+    vName.css('display', 'none')
+  }
+})
+
+// Validate email:
+$('#email').keyup(function () {
+  if (
+    $('#email')
+      .val()
+      .match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      )
+  ) {
+    vEmail.css('display', 'none')
+  } else {
+    vEmail.css('display', 'block')
+  }
+})
+
+// Validate phone:
+$('#phone').keyup(function () {
+  if (
+    $('#phone')
+      .val()
+      .match(/^(01)[0215][0-9]{8}$/)
+  ) {
+    vPhone.css('display', 'none')
+  } else {
+    vPhone.css('display', 'block')
+  }
+})
+
+// Validate age:
+$('#age').keyup(function () {
+  if (
+    $('#age')
+      .val()
+      .match(/^[2-8]{1}[0-9]{1}$/)
+  ) {
+    vAge.css('display', 'none')
+  } else {
+    vAge.css('display', 'block')
+  }
+})
+
+// Validate password:
+$('#password').keyup(function () {
+  if (
+    $('#password')
+      .val()
+      .match(/(?=.*?[A-Za-z])(?=.*?[0-9])[0-9A-Za-z]{8,}/)
+  ) {
+    vPassword.css('display', 'none')
+  } else {
+    vPassword.css('display', 'block')
+  }
+})
+
+// Validate reentered password:
+$('#repass').keyup(function () {
+  if ($('#repass').val() == $('#password').val()) {
+    vRePassword.css('display', 'none')
+  } else {
+    vRePassword.css('display', 'block')
+  }
+})
