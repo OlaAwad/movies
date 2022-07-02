@@ -28,22 +28,22 @@
         <div class="nav-topics">
           <ul>
             <li>
-              <a href="#" class="nav-topic">Now Playing</a>
+              <a href="#" class="nav-topic" id="now">Now Playing</a>
             </li>
             <li>
-              <a href="#" class="nav-topic">Popular</a>
+              <a href="#" class="nav-topic" id="popular">Popular</a>
             </li>
             <li>
-              <a href="#" class="nav-topic">Top Rated</a>
+              <a href="#" class="nav-topic" id="top">Top Rated</a>
             </li>
             <li>
-              <a href="#" class="nav-topic">Trending</a>
+              <a href="#" class="nav-topic" id="trend">Trending</a>
             </li>
             <li>
-              <a href="#" class="nav-topic">Upcoming</a>
+              <a href="#" class="nav-topic" id="upcoming">Upcoming</a>
             </li>
             <li>
-              <a href="#" class="nav-topic">Contact Us</a>
+              <a href="#contact" class="nav-topic">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -70,6 +70,7 @@
               id="allMovies"
               placeholder="get movies by word..."
               class="form-control mb-5"
+              onkeyup="searchMovies(this.value)"
             />
           </div>
           <div class="col-md-6">
@@ -78,6 +79,7 @@
               id="word"
               placeholder="search..."
               class="form-control mb-5"
+              onkeyup="searchAPI(this.value)"
             />
           </div>
         </div>
@@ -120,44 +122,88 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-            <div class="alert alert-danger" id="nameAlert">Your name is not valid</div>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter Your Name"
+            />
+            <div class="alert alert-danger" id="nameAlert">
+              Your name is not valid
+            </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Enter Email">
-            <div class="alert alert-danger" id="emailAlert">Enter valid email</div>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter Email"
+            />
+            <div class="alert alert-danger" id="emailAlert">
+              Enter valid email
+            </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="number" class="form-control" id="phone" placeholder="Enter Phone">
-            <div class="alert alert-danger" id="phoneAlert">Enter valid phone number</div>
+            <input
+              type="number"
+              class="form-control"
+              id="phone"
+              placeholder="Enter Phone"
+            />
+            <div class="alert alert-danger" id="phoneAlert">
+              Enter valid phone number
+            </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="number" class="form-control" id="age" placeholder="Enter Age">
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              placeholder="Enter Age"
+            />
             <div class="alert alert-danger" id="ageAlert">Enter valid age</div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter Password"
+            />
             <div class="alert alert-danger" id="passwordAlert">
-              entre valid password *Minimum eight characters, at least one letter and one number:*
-              </div>
+              entre valid password *Minimum eight characters, at least one
+              letter and one number:*
+            </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="password" class="form-control" id="repass" placeholder="Reenter Password">
-            <div class="alert alert-danger" id="rePassAlert">Reenter the password</div>
+            <input
+              type="password"
+              class="form-control"
+              id="repass"
+              placeholder="Reenter Password"
+            />
+            <div class="alert alert-danger" id="rePassAlert">
+              Reenter the password
+            </div>
           </div>
         </div>
       </div>
-      <button type="submit" disabled id="submitBtn" class="btn btn-outline-danger">
+      <button
+        type="submit"
+        disabled
+        id="submitBtn"
+        class="btn btn-outline-danger"
+      >
         Submit
       </button>
     </section>
